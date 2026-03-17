@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphy Jose | Data Analytics Portfolio</title>
+  <meta name="description" content="Portfolio of Alphy Jose - data analytics, SQL, Python, Tableau, and business intelligence projects." />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246, 248, 251, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 72px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 14px; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 16px; }
+    h3 { font-size: 1.15rem; margin-bottom: 10px; }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 68ch;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 26px;
+    }
+
+    .pill {
+      background: var(--accent-soft);
+      color: #1e40af;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--accent);
+    }
+
+    section {
+      padding: 18px 0 24px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .skills-grid,
+    .project-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .project-thumb {
+      height: 220px;
+      display: grid;
+      place-items: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .project-content {
+      padding: 22px;
+    }
+
+    .project-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .mini-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .mini-pills span {
+      background: #f3f4f6;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .footer {
+      padding: 30px 0 60px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .two-col,
+      .project-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-thumb {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Alphy Jose | Data Analytics Portfolio</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="card">
+        <h1>Turning data into clear, actionable business insights.</h1>
+        <p class="lead">
+          I’m Alphy Jose, a data analytics professional with experience in SQL, Python, Excel, Tableau, and ETL workflows. I build end-to-end analytics projects that combine data cleaning, exploration, visualization, and stakeholder-focused recommendations.
+        </p>
+        <div class="pill-row">
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">Excel</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">ETL</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Portfolio Highlights</h2>
+        <ul>
+          <li>Business-focused case studies with recommendations</li>
+          <li>Visualization-driven storytelling</li>
+          <li>Projects across retail, healthcare, entertainment, and gaming</li>
+          <li>Strong mix of technical analysis and business communication</li>
+        </ul>
+        <p class="note">Replace placeholder links and screenshots with your final project assets before publishing.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="card">
+        <p>
+          I’m a data professional with a background in software development and ETL, now focused on analytics and business intelligence. My work centers on transforming raw data into meaningful insights using SQL, Python, Excel, and Tableau. I enjoy solving business problems through structured analysis, clear storytelling, and practical recommendations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <p>Python, SQL, Jupyter Notebook</p>
+        </div>
+        <div class="skill-card">
+          <h3>Analytics</h3>
+          <p>EDA, data cleaning, aggregation, customer segmentation</p>
+        </div>
+        <div class="skill-card">
+          <h3>Visualization</h3>
+          <p>Tableau, Excel charts, Matplotlib, Seaborn</p>
+        </div>
+        <div class="skill-card">
+          <h3>Data Tools</h3>
+          <p>PostgreSQL, pandas, NumPy, Excel, ETL workflows</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-thumb">Add GameCo chart screenshot here</div>
+          <div class="project-content">
+            <div class="project-meta">Excel | Pivot Tables | Visualization</div>
+            <h3>GameCo Video Game Sales Analysis</h3>
+            <p>
+              Analyzed video game sales trends across regions, genres, and platforms to support strategic decisions around product development and marketing investment.
+            </p>
+            <div class="mini-pills">
+              <span>Regional Trends</span>
+              <span>Genre Analysis</span>
+              <span>Market Strategy</span>
+            </div>
+            <ul>
+              <li><strong>Problem:</strong> Understand changing game popularity across markets.</li>
+              <li><strong>Insight:</strong> Europe emerged as a key growth market while genre preferences varied by region.</li>
+              <li><strong>Tools:</strong> Excel, Pivot Tables, charts</li>
+            </ul>
+            <p><a href="#">Add case study link</a> | <a href="#">Add presentation link</a></p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">Add Influenza map or chart screenshot here</div>
+          <div class="project-content">
+            <div class="project-meta">Python | Tableau | Public Health Analytics</div>
+            <h3>Influenza Mortality & Resource Planning Analysis</h3>
+            <p>
+              Explored influenza mortality by season, state, and age group to identify high-risk periods and inform healthcare resource allocation.
+            </p>
+            <div class="mini-pills">
+              <span>Seasonality</span>
+              <span>Geographic Analysis</span>
+              <span>Healthcare Insights</span>
+            </div>
+            <ul>
+              <li><strong>Problem:</strong> Identify when and where influenza burden is highest.</li>
+              <li><strong>Insight:</strong> Winter peaks and senior populations drove the highest mortality burden.</li>
+              <li><strong>Tools:</strong> Python, Tableau, Excel</li>
+            </ul>
+            <p><a href="#">Add case study link</a> | <a href="#">Add dashboard link</a></p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">Add Rockbuster dashboard screenshot here</div>
+          <div class="project-content">
+            <div class="project-meta">PostgreSQL | SQL | Tableau</div>
+            <h3>Rockbuster Stealth Streaming Strategy Analysis</h3>
+            <p>
+              Used SQL to analyze revenue, customer geography, genre demand, and high-value customers to support Rockbuster’s online streaming launch strategy.
+            </p>
+            <div class="mini-pills">
+              <span>Revenue Analysis</span>
+              <span>Customer Geography</span>
+              <span>SQL Storytelling</span>
+            </div>
+            <ul>
+              <li><strong>Problem:</strong> Support the move from physical rentals to online streaming.</li>
+              <li><strong>Insight:</strong> Revenue and customer value were concentrated in a limited number of markets and titles.</li>
+              <li><strong>Tools:</strong> PostgreSQL, SQL, Tableau, Excel</li>
+            </ul>
+            <p><a href="#">Add case study link</a> | <a href="#">Add Tableau link</a></p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">Add Instacart chart screenshot here</div>
+          <div class="project-content">
+            <div class="project-meta">Python | pandas | Matplotlib</div>
+            <h3>Instacart Grocery Basket Analysis</h3>
+            <p>
+              Performed exploratory analysis and customer segmentation to identify ordering patterns, spending behaviors, and product demand trends.
+            </p>
+            <div class="mini-pills">
+              <span>Customer Segmentation</span>
+              <span>Order Patterns</span>
+              <span>Python EDA</span>
+            </div>
+            <ul>
+              <li><strong>Problem:</strong> Help Instacart personalize marketing and understand shopper behavior.</li>
+              <li><strong>Insight:</strong> Clear differences appeared by region, loyalty, and department demand.</li>
+              <li><strong>Tools:</strong> Python, pandas, matplotlib, seaborn</li>
+            </ul>
+            <p><a href="#">Add case study link</a> | <a href="#">Add notebook link</a></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p>LinkedIn: <a href="#">Add LinkedIn profile</a></p>
+          <p>GitHub: <a href="#">Add GitHub profile</a></p>
+        </div>
+        <div class="card">
+          <h3>Publishing Steps</h3>
+          <ol>
+            <li>Create a GitHub repository named <strong>yourusername.github.io</strong></li>
+            <li>Upload this file as <strong>index.html</strong></li>
+            <li>Replace placeholder text, links, and screenshots</li>
+            <li>Commit changes and publish with GitHub Pages</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      Built by Alphy Jose | Data Analytics Portfolio
+    </div>
+  </footer>
+</body>
+</html>
