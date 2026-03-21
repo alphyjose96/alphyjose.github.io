@@ -13,16 +13,35 @@
 </head>
 <body>
   <div class="nav"><div class="container"><a class="back" href="index.html">← Back to Portfolio</a></div></div>
-  <div class="hero container"><div class="card"><h1>Influenza Mortality Analysis</h1><p>Explored influenza deaths by season, geography, and age group to support healthcare planning and resource allocation.</p></div></div>
+  <div class="hero container"><div class="card">
+    <h1>Influenza Mortality Trends & Resource Allocation Insights in the U.S</h1>
+  </div></div>
   <div class="section container">
-    <div class="card"><h2>Business Problem</h2><p>Healthcare planners need to understand when and where influenza mortality is highest in order to allocate staff and resources more effectively.</p></div>
+    <div class="card"><h2>Business Problem</h2>
+      <p>Each year, the United States experiences a significant influenza season that places additional strain on hospitals and clinics.
+        To support healthcare facilities during these seasonal surges, a medical staffing agency deploys temporary nurses, physician assistants, and doctors to states experiencing the greatest need.
+        However, predicting when and where this demand will peak is challenging without a data-driven planning approach.</p>
+    </div>
     <div class="card"><h2>Key Objectives</h2><ul><li>Identify peak influenza seasons</li><li>Compare mortality across age groups</li><li>Map high-risk states</li><li>Support planning with clear visual insights</li></ul></div>
-    <div class="card"><h2>Data Source</h2><p>Influenza mortality data combined with U.S. population data for per-capita analysis.</p></div>
-    <div class="card"><h2>Tools</h2><p>Python, pandas, Tableau, Excel.</p></div>
-    <div class="card"><h2>Analytical Process</h2><p>I cleaned mortality and population datasets, standardized dates and state identifiers, and grouped records by month, state, and age group. I then calculated deaths per capita, summarized seasonal patterns, and created charts and maps to highlight high-risk periods and populations.</p></div>
-    <div class="card"><h2>Visualizations</h2><p>Include your Influenza visualizations here.</p><img src="images/influenza.png" alt="Influenza chart"></div>
+    <div class="card"><h2>Data Source</h2>
+      <p>CDC — Influenza Mortality Data(2009– 2017)</p>
+      <p>U.S. Census Bureau— Population Data(2009– 2017).</p>
+    </div>
+    <div class="card"><h2>Tools</h2><p>Tableau(storyboards & visual analytics)
+, Excel(cleaning & aggregation)
+.</p></div>
+    <div class="card"><h2>Analytical Process</h2><p>I cleaned mortality and population datasets, standardized dates and state identifiers.After cleaning, I merged the influenza mortality data with state-level population data to create a unified dataset.
+I also categorized age groups into meaningful segments (65+ and under 65) and  conducted hypothesis testing to evaluate the relationship between the 65+ population and influenza-related deaths across states.
+I then created Tableau visualizations such as bar charts and choropleth mapnds and highlight high-risk periods and regions. </p></div>
+    <div class="card"><h2>Visualizations</h2>
+      <p>When does Influenza Peak in the U.S.?</p><img src="images/influenza/influenza_1.png">
+      <p>Which Age Group Faces the Greatest Risk of Influenza-related Death? </p><img src="images/influenza/influenza_2.png">
+      <p>How does Influenza Mortality Differ across U.S. States? </p><img src="images/influenza/influenza_3.png">
+    </div>
     <div class="card"><h2>Insights</h2><ul><li>Influenza deaths peak during winter months.</li><li>Seniors aged 65+ face much higher mortality risk.</li><li>Certain states show disproportionately high death rates per capita.</li></ul></div>
-    <div class="card"><h2>Recommendations</h2><ul><li>Increase staffing ahead of winter surge periods.</li><li>Prioritize vulnerable populations in outreach and care planning.</li><li>Use regional targeting for resource allocation.</li></ul></div>
+    <div class="card"><h2>Recommendations</h2><ul><li>Ramp up staffing ahead of winter, beginning in November, and maintain peak deployment through December to March, when influenza deaths consistently surge.
+</li><li>Prioritize vulnerable populations in outreach and care planning.</li><li>Additional medical personnel should be send to high-risk states such as Alaska,North Dakota, South Dakota, Montana, and Wyoming, which show the highest influenza deaths per capita.
+.</li></ul></div>
   </div>
 </body>
 </html>
