@@ -13,16 +13,23 @@
 </head>
 <body>
   <div class="nav"><div class="container"><a class="back" href="index.html">← Back to Portfolio</a></div></div>
-  <div class="hero container"><div class="card"><h1>Instacart Grocery Basket Analysis</h1><p>Explored customer ordering behavior, spending patterns, and department demand to support targeted marketing and segmentation strategy.</p></div></div>
+  <div class="hero container"><div class="card"><h1>Customer Behavior & Sales Pattern Analysis for Instacart
+</h1>></div></div>
   <div class="section container">
-    <div class="card"><h2>Business Problem</h2><p>Instacart needed to better understand differences in customer behavior so that marketing efforts could be targeted instead of using a one-size-fits-all approach.</p></div>
-    <div class="card"><h2>Key Objectives</h2><ul><li>Identify busiest days and hours for orders</li><li>Understand spending patterns by time and region</li><li>Measure popularity across product departments</li><li>Compare ordering behavior across customer segments</li></ul></div>
-    <div class="card"><h2>Data Source</h2><p>Instacart transactional datasets combined with customer demographic data and product metadata.</p></div>
+    <div class="card"><h2>Business Problem</h2><p>Instacart is an online grocery platform seeking deeper insights into customer purchasing behavior to improve targeted marketing campaigns.
+      While overall sales are strong, stakeholders want to better understand ordering patterns, customer loyalty, spending habits, and product preferences in order to move away from one-size-fits-all marketing.
+</p></div>
+    <div class="card"><h2>Key Objectives</h2><ul><li>Identify busiest days and hours for orders</li><li>Understand spending patterns by region</li><li>Measure popularity across product departments</li></ul></div>
+    <div class="card"><h2>Data Source</h2><p>Kaggle — Instacart Online Grocery Shopping dataset (2017) </p></div>
     <div class="card"><h2>Tools</h2><p>Python, pandas, NumPy, matplotlib, seaborn, Jupyter Notebook.</p></div>
     <div class="card"><h2>Analytical Process</h2><p>I cleaned and merged multiple Instacart datasets, corrected data types, handled missing values, and created derived variables such as loyalty flags, spending categories, and customer profiles. I then used groupby aggregations and Python visualizations to analyze order timing, department demand, and behavioral differences across regions and segments.</p></div>
-    <div class="card"><h2>Visualizations</h2><p>Include your Instacart visualizations here.</p><img src="images/instacart.png" alt="Instacart chart"></div>
-    <div class="card"><h2>Insights</h2><ul><li>Orders peak on weekends and during late morning to afternoon hours.</li><li>Produce and Dairy/Eggs dominate department demand.</li><li>Customer value and spending patterns vary across regions.</li></ul></div>
-    <div class="card"><h2>Recommendations</h2><ul><li>Run campaigns during lower-demand periods to smooth volume.</li><li>Prioritize inventory and promotions for top departments.</li><li>Use regional and customer-level segmentation for targeted marketing.</li></ul></div>
+    <div class="card"><h2>Visualizations</h2>
+      <p>When are the busiest days and hours for orders?</p><img src="images/instacart/instacart_1.png"><img src="images/instacart/instacart_2.png">
+      <p>Are there certain types of products that are more popular than others?</p><img src="images/instacart/instacart_3.png">
+      <p>Are there differences in spending habits based on a customer’s region?</p><img src="images/instacart/instacart_4.png">
+    </div>
+    <div class="card"><h2>Insights</h2><ul><li>Orders peak on weekends and during late morning to afternoon hours.</li><li>Produce and Dairy/Eggs dominate department demand.</li><li>Low spenders dominate across all regions, representing the majority of Instacart’s customer base.</li></ul></div>
+    <div class="card"><h2>Recommendations</h2><ul><li>Schedule marketing campaigns and promotions during midweek and off-peak hours to stimulate demand when order volume is naturally lower.</li><li>Prioritize inventory availability and promotions in Produce and Dairy to protect high-demand revenue streams.</li><li>Target premium product promotions and loyalty programs in the South, where high spenders are most concentrated.</li></ul></div>
   </div>
 </body>
 </html>
